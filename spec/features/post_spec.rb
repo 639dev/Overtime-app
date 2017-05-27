@@ -31,7 +31,6 @@ describe 'navigate' do
       visit new_post_path
     end
     it "has a new form that can be reached" do
-      
       expect(page.status_code).to eq(200)
     end
 
