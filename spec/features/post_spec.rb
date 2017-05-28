@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'navigate' do
   before do
-    user = User.create(email: "test@test.com" ,password: "stfstf" ,password_confirmation: "stfstf" ,first_name: "john" ,last_name: "mac")
-    login_as(user,:scope => :user)
+    @user = FactoryGirl.create(:user)
+    login_as(@user,:scope => :user)
   end
 
   describe 'index' do
@@ -19,8 +19,9 @@ describe 'navigate' do
     end
 
     it 'has a list of posts' do
-      post = Post.create(date: Date.today , rationale: "....")
-      post = Post.create(date: Date.today , rationale: "post2")
+      post = FactoryGirl.build_stubbed(:post)
+      post = FactoryGirl.build_stubbed(:second_post)
+
       visit posts_path
       expect(page).to have_content(/....|post2/)
     end
@@ -47,6 +48,12 @@ describe 'navigate' do
       click_on "Save"
 
       expect(User.last.posts.last.rationale).to eq("User Association")
+    end
+  end
+
+    describe 'custom name methods' do
+    it 'has a full name method that combines first and last name' do
+      expect(@user.full_name).to eq('MAC, JOHN')
     end
   end
 end
