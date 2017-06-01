@@ -5,15 +5,10 @@ namespace :notification do
     # 2. Iterate over all employees.
     # 3. Skip admin users.
     # 4. Send a message that has instructions and a link to log time.
-
-    # -- validations --
-    # no spaces or dashes !
-    # exactly 10 charactters!
-    # all characters have to be numbers
+    #User.all.each do |user|
+    #  SmsTool.send_sms(number: 0000)
+    #end
     
-    User.all.each do |user|
-      SmsTool.send_sms(number: 0000)
-    end
   end
 
 end
