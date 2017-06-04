@@ -23,7 +23,7 @@ end
 puts "100 post have been created"
 
 100.times do |audit|
-  AuditLog.create!(user_id: @user.id , status: 0, strat_date: (Date.today - 6.days))
+  AuditLog.create!(user_id: User.last.id , status: 0, strat_date: (Date.today - 6.days))
 end
 
 puts "100 audit logs have been created"
