@@ -6,8 +6,10 @@ class AuditLog < ApplicationRecord
 
   after_initialize :set_defaults
 
+
   private 
   def set_defaults
     self.strat_date ||= Date.today - 6.days
   end
+
 end
