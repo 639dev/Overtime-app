@@ -7,7 +7,7 @@
 
 puts '1 employee created'
 
-AdminUser.create!(email: "admin@devcamp.com" ,
+AdminUser.create!(email: "gharood_3@hotmail.com" ,
   password: "stfstf" ,
   password_confirmation: "stfstf" ,
   first_name: "tagreed" ,
