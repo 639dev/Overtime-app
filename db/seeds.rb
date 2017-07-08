@@ -1,15 +1,15 @@
-@employee = Employee.create!(email: "tagreedalshammari@gmail.com" ,
-  password: "stfstf" ,
-  password_confirmation: "stfstf" ,
+@employee = Employee.create!(email: "employee@dev.com" ,
+  password: "asdfasdf" ,
+  password_confirmation: "asdfasdf" ,
   first_name: "john" ,
   last_name: "mac",
   phone: "1312948956")
 
 puts '1 employee created'
 
-AdminUser.create!(email: "gharood_3@hotmail.com" ,
-  password: "stfstf" ,
-  password_confirmation: "stfstf" ,
+AdminUser.create!(email: "admin@dev.com" ,
+  password: "asdfasdf" ,
+  password_confirmation: "asdfasdf" ,
   first_name: "tagreed" ,
   last_name: "saeed",
   phone: "1312948956")
