@@ -8,6 +8,7 @@ class AuditLog < ApplicationRecord
 
   before_update :set_end_date, if: :confirmed?
 
+  scope :by_start_date, -> {order('strat_date desc')}
   private 
   def set_defaults
     self.strat_date ||= Date.today - 6.days
