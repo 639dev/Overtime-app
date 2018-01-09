@@ -18,3 +18,6 @@ Key requiremnet: company needs documantation that salaried employees did or did 
 
 ## UI:
 - Bootstrap -> formatting
+
+
+## You can view it through : https://my-overtime-app.herokuapp.com
